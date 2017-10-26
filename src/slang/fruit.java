@@ -21,7 +21,7 @@ public class fruit extends JPanel {
           super.paintComponents(y);
          // super.paint(g);
           Graphics2D g2 =(Graphics2D) y;
-          y2.fill(new Ellipse2D.Double(fruitx,fruity,20,20));
+          g2.fill(new Ellipse2D.Double(fruitx,fruity,20,20));
           //Color color = Color.GREEN;
       }
 }
