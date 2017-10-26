@@ -9,19 +9,23 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
 import javax.swing.JPanel;
-import java.awt.Color;
 /**
  *
  * @author chris
  */
-public class fruit extends JPanel {
-    double fruitx = 40,fruity = 40;
+public class Fruit extends JPanel {
+    int fruitx = 10,fruity = 10;
+    Map map;
+    
+    public Fruit(Map _map) {
+        map = _map;
+    }
     
     public void paintComponent(Graphics y) {
           super.paintComponents(y);
          // super.paint(g);
           Graphics2D g2 =(Graphics2D) y;
-          g2.fill(new Ellipse2D.Double(fruitx,fruity,20,20));
+          g2.fill(new Ellipse2D.Double(fruitx,fruity,10,10));
           //Color color = Color.GREEN;
       }
 }
