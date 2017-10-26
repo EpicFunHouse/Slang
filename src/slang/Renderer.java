@@ -7,6 +7,7 @@ package slang;
 
 import java.awt.Dimension;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,13 +15,18 @@ import javax.swing.JFrame;
  */
 public class Renderer extends JFrame {
     Map map;
+    JPanel slangPanel;
     
-    public Renderer() {
+    public Renderer(JPanel panel) {
         setBounds(0,0,330,330);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         map = new Map();
+        
+        slangPanel = panel;
+        
+        this.add(slangPanel);
     }
     
     public Map getMap() {

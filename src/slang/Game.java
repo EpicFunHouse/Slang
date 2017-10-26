@@ -11,10 +11,9 @@ public class Game {
     static Map map;
     
     public static void main(String args[]) {
-        renderer = new Renderer();
+        Slang slang = new Slang(new Map());
+        renderer = new Renderer(slang);
         map = renderer.getMap();
-        
-        Slang slang = new Slang(map);
         renderer.add(slang);
 
         /*frame.add(slang);

@@ -15,7 +15,7 @@ import java.awt.geom.*;
 public class Slang extends JPanel implements ActionListener, KeyListener {
 
       Timer t = new Timer (100,this);
-      int currentXPosition = 0,currentYPosition = 0, velx = 0, vely = 0, xfruit = 25,yfruit = 25;
+      int currentXPosition = 5,currentYPosition = 5, velx = 0, vely = 0, xfruit = 25,yfruit = 25;
       Map map;
       
       public Slang(Map _map) {
@@ -34,7 +34,7 @@ public class Slang extends JPanel implements ActionListener, KeyListener {
          // super.paint(g);
           Graphics2D g2 =(Graphics2D) g;
           g2.fill(new Ellipse2D.Double( currentXPosition * 10, currentYPosition * 10, 10, 10));
-          
+          System.out.println("paintComponent!!!");
       }
     //  public void paintComponent(Graphics f) {
     //      super.paintComponents(f);
@@ -44,6 +44,8 @@ public class Slang extends JPanel implements ActionListener, KeyListener {
           
     //  }
           public void actionPerformed(ActionEvent e) {
+              repaint();
+
               currentXPosition += velx;
               currentYPosition += vely;
               
@@ -65,7 +67,6 @@ public class Slang extends JPanel implements ActionListener, KeyListener {
                   currentYPosition = 30;
               }
               
-              repaint();
 
           }
           public void up() {
